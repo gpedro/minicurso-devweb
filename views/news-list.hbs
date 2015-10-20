@@ -1,0 +1,14 @@
+<div class="news">
+	{{#if news.length }}
+		{{#each news}}
+		<div class="news-item">
+			<h2><a href="/news/{{ id }}">{{ created_at }} - {{ title }}</a></h2>
+			<p>{{ description }}</p>
+			<a href="/news/{{ id }}/delete" onClick="confirm('Esta ação é irreversível. Deseja continuar?')">Deletar</a>
+			<hr>
+		</div>
+		{{/each}}
+	{{else}}
+		<p>Nenhuma notícia encontrada.</p>
+	{{/if}}
+</div>

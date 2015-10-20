@@ -1,0 +1,20 @@
+{{#if errors.length }}
+<ul>
+	{{#each errors}}
+	<li>{{ this }}</li>
+	{{/each}}
+</ul>
+{{/if}}
+
+<form action="/news/create" method="POST">
+	<label>Título</label><br />
+	<input type="text" name="title" /><br />
+
+	<label>Descrição</label><br />
+	<textarea name="description"></textarea><br />
+
+	<label>Notícia</label><br />
+	<textarea name="text"></textarea><br />
+
+	<input type="submit" value="Cadastrar" />
+</form>
